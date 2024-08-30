@@ -1,0 +1,412 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "name": "user"
+    },
+    {
+      "id": "2",
+      "name": "admin"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "$2a$10$//kKTPZ6wMGfkGa7dB2AMObd6pXjcin5isRnfkislT5Xk3iTU8ErG",
+      "email": "john@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "status": "active",
+      "registeredAt": "2024-01-10",
+      "phone": "0917833222",
+      "settings": {
+        "theme": "light",
+        "backgroundImage": ""
+      },
+      "roleId": 1,
+      "groups": [
+        "1",
+        "2"
+      ],
+      "invitations": [
+        "1"
+      ]
+    },
+    {
+      "status": "active",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "password": "$2a$10$w56zNdbGN6jrAGGsR6QgguO.Sa689VkEqYjOrPSj3F6obQDpVXvSG",
+      "email": "admin@example.com",
+      "firstName": "Admin",
+      "lastName": "User",
+      "status": "active",
+      "registeredAt": "2024-01-01",
+      "settings": {
+        "theme": "light",
+        "backgroundImage": ""
+      },
+      "roleId": 2,
+      "groups": [],
+      "invitations": [
+        "1"
+      ]
+    },
+    {
+      "id": "5d55",
+      "username": "hung111",
+      "password": "$2a$10$Vwexs1LRpSnlt0nJ5Zc.A.kBBlH/QRqAqwQ9dKR6QD7FM0cREwtHC",
+      "email": "tungbeo@gmai.com",
+      "registeredAt": "2024-08-21",
+      "status": "active",
+      "settings": {
+        "theme": "light",
+        "backgroundImage": ""
+      },
+      "phone": "0917899282",
+      "groups": [],
+      "invitations": []
+    },
+    {
+      "id": "8018",
+      "username": "hung123",
+      "password": "$2a$10$cYu4HYT55RNcZV0z/rK3/Ovka1qnTMFKIeXgPK4ypA3vcEFmLN6QS",
+      "email": "hungnqhs176110@fpt.edu.vn",
+      "status": "active",
+      "registeredAt": "2024-08-21T15:03:23.550Z",
+      "settings": {
+        "theme": "light",
+        "backgroundImage": ""
+      },
+      "phone": "0917899282",
+      "groups": [],
+      "invitations": []
+    },
+    {
+      "id": "4f87",
+      "username": "hung123",
+      "password": "$2a$10$1fxieVkDuhCepjT/VLZuI.iE2qS7R2yRfDO/moNPvldRZD1/dps1m",
+      "email": "hung@123email.com",
+      "status": "active",
+      "registeredAt": "2024-08-22T06:33:01.580Z",
+      "settings": {
+        "theme": "light",
+        "backgroundImage": ""
+      },
+      "roleId": 1,
+      "phone": "0917899232"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Family Expenses",
+      "members": [
+        "1",
+        "2"
+      ],
+      "transactions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "pendingInvitations": [
+        "3"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Roommates",
+      "members": [
+        "1"
+      ],
+      "transactions": [
+        "5",
+        "6"
+      ],
+      "pendingInvitations": []
+    }
+  ],
+  "invitations": [
+    {
+      "id": "1",
+      "groupId": "1",
+      "senderId": "1",
+      "recipientId": "3",
+      "status": "pending",
+      "sentAt": "2024-08-21T10:00:00"
+    },
+    {
+      "id": "2",
+      "groupId": "2",
+      "senderId": "1",
+      "recipientId": "2",
+      "status": "accepted",
+      "sentAt": "2024-08-20T12:00:00",
+      "respondedAt": "2024-08-20T14:00:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "groupId": "1",
+      "senderId": "1",
+      "content": "I just paid the rent.",
+      "timestamp": "2024-08-20T10:00:00"
+    },
+    {
+      "id": "2",
+      "groupId": "1",
+      "senderId": "2",
+      "content": "Great! I will reimburse you later.",
+      "timestamp": "2024-08-20T10:05:00"
+    },
+    {
+      "id": "3",
+      "groupId": "2",
+      "senderId": "1",
+      "content": "Let's buy groceries this weekend.",
+      "timestamp": "2024-08-21T15:00:00"
+    }
+  ],
+  "balance": [
+    {
+      "userId": 1,
+      "currentBalance": 150000,
+      "currency": "VND",
+      "id": "0415"
+    },
+    {
+      "userId": 2,
+      "currentBalance": 200000,
+      "currency": "VND",
+      "id": "5cb8"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "userId": 1,
+      "name": "Food & Drink",
+      "type": "expense"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "name": "Transportation",
+      "type": "expense"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "name": "Entertainment",
+      "type": "expense"
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "name": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "5",
+      "userId": 1,
+      "name": "Investment",
+      "type": "income"
+    },
+    {
+      "id": "6",
+      "userId": 2,
+      "name": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "7",
+      "userId": 2,
+      "name": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "8",
+      "userId": 2,
+      "name": "Freelance",
+      "type": "income"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "categoryId": 1,
+      "userId": 1,
+      "amount": 50000,
+      "date": "2024-07-10",
+      "description": "Lunch at restaurant",
+      "type": "expense",
+      "groupId": "1"
+    },
+    {
+      "id": "2",
+      "categoryId": 2,
+      "userId": 1,
+      "amount": 20000,
+      "date": "2024-07-11",
+      "description": "Taxi fare",
+      "type": "expense",
+      "groupId": "1"
+    },
+    {
+      "id": "3",
+      "categoryId": 4,
+      "userId": 1,
+      "amount": 300000,
+      "date": "2024-07-05",
+      "description": "Monthly salary",
+      "type": "income",
+      "groupId": "1"
+    },
+    {
+      "id": "4",
+      "categoryId": 3,
+      "userId": 1,
+      "amount": 10000,
+      "date": "2024-07-12",
+      "description": "Movie tickets",
+      "type": "expense",
+      "groupId": "1"
+    },
+    {
+      "id": "5",
+      "categoryId": 5,
+      "userId": 1,
+      "amount": 150000,
+      "date": "2024-07-15",
+      "description": "Investment in stocks",
+      "type": "income",
+      "groupId": "2"
+    },
+    {
+      "id": "6",
+      "categoryId": 6,
+      "userId": 2,
+      "amount": 300000,
+      "date": "2024-07-10",
+      "description": "Weekly groceries",
+      "type": "expense",
+      "groupId": "2"
+    },
+    {
+      "id": "7",
+      "categoryId": 7,
+      "userId": 2,
+      "amount": 5000000,
+      "date": "2024-07-01",
+      "description": "Monthly rent",
+      "type": "expense",
+      "groupId": "2"
+    },
+    {
+      "id": "8",
+      "categoryId": 8,
+      "userId": 2,
+      "amount": 2500000,
+      "date": "2024-07-15",
+      "description": "Freelance project",
+      "type": "income",
+      "groupId": "2"
+    },
+    {
+      "id": "04f2",
+      "amount": 454000,
+      "description": "entertainment",
+      "categoryId": "1",
+      "date": "2024-08-21",
+      "type": "expense",
+      "userId": "1",
+      "groupId": "1"
+    }
+  ],
+  "monthlyBalance": [
+    {
+      "month": "2024-06",
+      "balance": 800000,
+      "userId": 1,
+      "currency": "VND",
+      "id": "c91a"
+    },
+    {
+      "month": "2024-07",
+      "balance": 1000000,
+      "userId": 1,
+      "currency": "VND",
+      "id": "fb74"
+    },
+    {
+      "month": "2024-08",
+      "balance": 1200000,
+      "userId": 1,
+      "currency": "VND",
+      "id": "8eba"
+    },
+    {
+      "month": "2024-06",
+      "balance": 1200000,
+      "userId": 2,
+      "currency": "VND",
+      "id": "7efc"
+    },
+    {
+      "month": "2024-07",
+      "balance": 1800000,
+      "userId": 2,
+      "currency": "VND",
+      "id": "8275"
+    },
+    {
+      "month": "2024-08",
+      "balance": 2200000,
+      "userId": 2,
+      "currency": "VND",
+      "id": "841a"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "userId": "3",
+      "title": "Invitation to join Family Expenses",
+      "content": "John Doe has invited you to join the group 'Family Expenses'.",
+      "createdAt": "2024-08-21T10:00:00",
+      "invitationId": "1",
+      "status": "unread"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "title": "New Feature Release",
+      "content": "We have added a new feature for tracking investments. Check it out!",
+      "createdAt": "2024-07-20",
+      "status": "read"
+    }
+  ],
+  "userManagement": [
+    {
+      "adminId": 3,
+      "userId": 1,
+      "action": "reset_password",
+      "timestamp": "2024-07-22 10:00:00",
+      "id": "ca0c"
+    },
+    {
+      "adminId": 3,
+      "userId": 2,
+      "action": "deactivate_account",
+      "timestamp": "2024-07-23 14:30:00",
+      "id": "5ead"
+    }
+  ]
+}

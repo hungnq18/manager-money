@@ -1,0 +1,61 @@
+.intro-container {
+  background-image: url("../img/test.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay mờ */
+  z-index: 1;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-title, .intro-subtitle {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Thêm đổ bóng cho chữ */
+}
+
+.intro-title {
+  font-size: 4rem; /* Tăng kích thước tiêu đề */
+  margin-bottom: 1rem;
+  animation-delay: 0.5s; /* Đảm bảo xuất hiện đầu tiên */
+}
+
+.intro-subtitle {
+  font-size: 2rem; /* Tăng kích thước phụ đề */
+  opacity: 0.9;
+  animation-delay: 1.5s; /* Đảm bảo xuất hiện sau tiêu đề */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Thêm hiệu ứng di chuyển nhẹ */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Trở lại vị trí ban đầu */
+  }
+}

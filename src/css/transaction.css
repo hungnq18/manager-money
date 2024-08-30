@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, rgba(229, 240, 247, 0.85), rgba(209, 230, 237, 0.85)), 
+                    url('../img/test.jpg'); /* Kết hợp ảnh nền và gradient */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  font-family: 'Poppins', sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto  auto;
+  grid-template-areas:
+      " header header header"
+      " Main Main Main"
+      " footer footer footer";
+  height: fit-content;
+  width: 100vw;
+  margin: 0;
+  padding: 20px;
+}
+/* Các phần tử lưới */
+.header {
+  grid-area: header;
+}
+
+.header .navbar {
+  border: 2px solid rgba(209, 230, 237, .2);
+  color: #004d40; /* Màu chữ mới (xanh đậm hơn) */
+  border-radius: 10px;
+  background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
+  transition: box-shadow 0.3s ease; /* Thêm transition */
+}
+
+.header .navbar:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Chỉ có box-shadow khi hover */
+}
+
+.Main {
+  grid-area: Main;
+  padding-top: 20px;
+}
+
+/* Căn giữa nội dung trong Card.Header */
+.Main .card {
+  background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
+  border: 2px solid rgba(209, 230, 237, .2);
+  color: #004d40; /* Màu nội dung xanh đậm hơn */
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease; /* Thêm transition */
+}
+
+.Main .card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Chỉ có box-shadow khi hover */
+}
+
+/* Khoảng cách giữa các list-group-item */
+.Main .list-group-item {
+  padding: 10px;
+  background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
+  border: 2px solid rgba(209, 230, 237, .2);
+  color: #004d40; /* Màu nội dung xanh đậm hơn */
+  border-radius: 10px;
+  margin-bottom: 3px; /* Thêm khoảng cách giữa các item */
+  transition: box-shadow 0.3s ease; /* Thêm transition */
+}
+
+.Main .list-group-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Chỉ có box-shadow khi hover */
+}
+
+.Main .card-header {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #004d40; /* Màu chữ xanh đậm hơn */
+}
+
+/* Căn chỉnh nội dung trong Card.Body */
+.Main .card-body {
+  padding: 10px;
+  color: #004d40; /* Màu nội dung xanh đậm hơn */
+}
+
+.col-md-6:first-child {
+  border-right: 2px solid #000;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: bold;
+  color: #004d40; /* Màu chữ xanh đậm hơn */
+}
+
+.card-text {
+  text-align: center;
+  color: #004d40; /* Màu chữ xanh đậm hơn */
+}
+
+.Main .history-link {
+  text-align: center;
+  display: flex;
+}
+
+.Main .history-link p {
+  text-decoration: none;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #004d40; /* Màu chữ xanh đậm hơn */
+}
+
+.Main .history-link a:hover {
+  text-decoration: underline;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.Main .history-link a {
+  padding: 3px;
+  font-size: 16px;
+  color: #004d40; /* Màu chữ xanh đậm hơn */
+}
+.add-finance-btn {
+  background-color: #004d40; /* Màu nền nút */
+  color: white; /* Màu chữ và biểu tượng */
+  border: none;
+  padding: 20px;
+  font-size: 40px;
+  border-radius: 50%; /* Biến nút thành hình tròn */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Đặt nút ở vị trí cố định */
+  bottom: 20px; /* Cách đáy màn hình 20px */
+  right: 20px; /* Cách phải màn hình 20px */
+  width: 80px; /* Chiều rộng của nút */
+  height: 80px; /* Chiều cao của nút */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.add-finance-btn:hover {
+  background-color: #00796b; /* Màu nền khi hover */
+  transform: scale(1.1); /* Phóng to nút khi hover */
+}
+
+.add-finance-btn i {
+  font-size: 24px; /* Kích thước biểu tượng */
+}
+
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Chỉ có box-shadow khi hover */
+}
+
+/* Media Query cho thiết bị di động */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Chuyển sang bố trí một cột */
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "Main"
+        "footer";
+  }
+
+  .Main {
+    grid-area: Main;
+    width: 100%;
+    background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease; /* Thêm transition */
+  }
+
+  .Main:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Chỉ có box-shadow khi hover */
+  }
+
+  .Main .card {
+    margin-bottom: 10px; /* Thêm khoảng cách giữa các item */
+  }
+  
+  .header{
+    padding : 10px;
+    color: #004d40; /* Màu chữ xanh đậm hơn */
+  }
+
+}
