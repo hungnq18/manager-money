@@ -56,9 +56,8 @@ function CategoryList() {
           <ListGroup.Item key={category.id}>
             {category.name}
             <Button 
-              variant="danger" 
-              className="float-end"
-              size
+              variant="danger"
+              className="float-end "
               onClick={() => handleDelete(category.id)} // Gọi hàm xóa khi nhấn nút
             >
               Delete

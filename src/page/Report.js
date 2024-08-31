@@ -4,6 +4,7 @@ import Header from '../component/Header';
 import ReportChart from '../component/ReportChart';
 import { UserContext } from '../context/UserContext';
 import '../css/report.css';
+import '../index.css';
 
 function Report() {
   const { transactions, getTransactions, monthlyBalances, getMonthlyBalances } = useContext(UserContext);

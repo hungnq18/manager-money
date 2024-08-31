@@ -1,4 +1,3 @@
-// context/GroupContext.js
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 
@@ -27,9 +26,24 @@ export const GroupProvider = ({ children }) => {
     }
   };
 
+  const addGroup = (group) => {
+    axios.post('http://localhost:9999/groups', group)
+      .then(response => setGroups([...groups, response.data]))
+      .catch(error => console.error('Error adding group:', error));
+  };
+
+  const memberGroup = (groupId) => {
+    axios.get(`http://localhost:9999/groups/${groupId}/members`)
+      .then(response => setCurrentGroup({ ...currentGroup, members: response.data }))
+      .catch(error => console.error('Error fetching members:', error));
+  };
+
   return (
-    <GroupContext.Provider value={{ groups, currentGroup, fetchGroupById }}>
+    <GroupContext.Provider value={{ groups, currentGroup, fetchGroupById, addGroup, memberGroup }}>
       {children}
     </GroupContext.Provider>
   );
 };
+
+// Xuất từng thành phần riêng biệt
+export default GroupContext;

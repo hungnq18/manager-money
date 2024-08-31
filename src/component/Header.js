@@ -33,7 +33,7 @@ function Header() {
         <Nav className="me-auto">
           <Nav.Link href={`/transaction/user/${currentUserId}`}>Transaction</Nav.Link>
           <Nav.Link href={`/report/user/${currentUserId}`}>Report</Nav.Link>
-          <Nav.Link href={`/groups/${currentUserId}`}>Groups</Nav.Link> {/* Điều hướng đến trang Groups */}
+          <Nav.Link href={`/groups/user/${currentUserId}`}>Groups</Nav.Link> {/* Điều hướng đến trang Groups */}
           <NavDropdown title="Settings" id="basic-nav-dropdown">
             <NavDropdown.Item href={`/profile/user/${currentUserId}`}>Profile</NavDropdown.Item>
             <NavDropdown.Item href={`/account-settings/user/${currentUserId}`}>Account Settings</NavDropdown.Item>
@@ -91,7 +91,7 @@ function Header() {
           <Dropdown.Menu>
             {groups && groups.length > 0 ? (
               groups.map((group, index) => (
-                <Dropdown.Item key={index} href={`/groups/${group.id}`}>
+                <Dropdown.Item key={index} href={`/groups/users/${user?.id}/${group.id}`}>
                   {group.name}
                 </Dropdown.Item>
               ))

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import EditCategories from './component/EditCategory';
 import EditTransaction from './component/EditTransaction';
+import GroupDetail from './component/GroupDetail';
 import { AuthContext, AuthProvider } from './context/AuthContext';
 import { GroupProvider } from './context/GroupContext'; // Import GroupProvider
 import { ThemeProvider } from './context/ThemeContext';
@@ -9,7 +10,7 @@ import { UserProvider } from './context/UserContext';
 import './index.css';
 import AccountSettings from './page/AccountSetting';
 import AdminDashboard from './page/AdminDashboard';
-import GroupDetails from './page/Group';
+import { default as Group } from './page/Group';
 import History from './page/History';
 import Intro from './page/Intro';
 import Login from './page/Login';
@@ -48,7 +49,8 @@ function App() {
           <Route path="/manage-expense/user/:userId" element={<ManageExpense />} />
           <Route path="/manage-income/user/:userId" element={<ManageIncome />} />
           <Route path="/admin/users/:userId" element={<UserDetail />} />
-          <Route path="/groups/:groupId" element={<GroupDetails />} /> {/* Route mới cho Group */}
+          <Route path="/groups/user/:userId" element={<Group />} />
+          <Route path="/groups/user/:userId/:groupId" element={<GroupDetail />} /> {/* Route mới cho Group */}
         </Routes>
       </Router>
     </GroupProvider>

@@ -25,6 +25,7 @@ body {
 /* Các phần tử lưới */
 .header {
   grid-area: header;
+  position: sticky;
 }
 
 .header .navbar {
@@ -32,7 +33,8 @@ body {
   color: #004d40; /* Màu chữ mới (xanh đậm hơn) */
   border-radius: 10px;
   background-color: rgba(229, 240, 247, 0.9); /* Nền xanh pastel nhạt */
-  transition: box-shadow 0.3s ease; /* Thêm transition */
+  transition: box-shadow 0.3s ease;
+  /* Thêm transition */
 }
 
 .header .navbar:hover {
